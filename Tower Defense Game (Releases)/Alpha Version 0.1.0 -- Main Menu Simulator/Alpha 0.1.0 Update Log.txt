@@ -1,0 +1,50 @@
+Alpha Version 0.1.0 -- "Main Menu Simulator" -- October 31st, 2016 1:05 AM Central Standard Time
+
+Intentions for Alpha and Beyond:
+	-My goal for the alpha verion of the game is to make a playable game that works. It will more than likely not be pretty and always smooth, but it will work (most
+	of the time).
+	-For beta I'll look to make the game cleaner and less like an 8bit game from the 80s. Additionally I'll be expanding on the features of the game from just basic test
+	maps, towers, enemies, etc. to a more complete list that would be expected of a full game. I'll also stream line the usability of all aspects of the game, as well as
+	refine and rework the core game logic to be complete and smooth.
+	-For the complete release of the game out of the development stage, the game should look and feel complete. There should be minimal bugs, no obvious issues, and not
+	have a "this doesn't feel polished" look to it. Obviously it won't be perfect and I anticipate to update it more after release.
+
+Overview (My interpretation of the update):
+	-With this being the first version of the game, I was just looking to be able to show something. I went through lots of ideas creating and scrapping several ideas 
+	each minute, and after working for a while I decided for the basic menu design that is implemented in this version.
+
+New Features/ Changes (Features that have been implemented into the game since the last update or changed.):
+	-Start Menu
+	-"Tower Defense" game title text
+	-"Start" button (non functional)
+	-"Exit" button
+		-"Yes" button
+		-"No" button
+	-"Reset" button
+
+Code Tweaks (Things that I have done to the code since the last update.):
+	-Created restart function: 					"restart()"
+	-Created scalable button drawer function: 			"button_drawer(x, y)"
+	-Created button hub function: 					"main_buttons(x, y)"
+	-Created function for start button: 				"start_button(x, y)"
+	-Created function for exit button and its sub buttons:		"exit_button(x, y)"
+	-Created function to create menu window:			"start_menu_window()"
+
+Current Known Bugs (Bugs that are in the game that I know of and am in the process of fixing.):
+	-When I run the game in a location other than my desktop the "Reset" button and the "No" button under the "Exit" button just close the game rather than reseting
+	it. (I have not tested it on a computer other than mine. Seems to be an issue with the directory of the game "no duh").
+
+	-You have to press the "Start" and "End" Buttons twice for them to work. (Not necessarily a bug, but I do not know how to work around it at the moment.)
+
+	-If you press the "Start" button the game thinks that every click after that is on the start button.
+
+	-Reseting the game either through the "Reset" button or the "No" button under the "Exit" button closes the entire window and reopens it instead of just refreshing 
+	the window. (Not necessarily a bug, but at the moment I do not know how to reset the window any other way.)
+
+	-If you press where the "No" button is under the "Exit" button before you press the "Exit" button it still resets the game. (I do not know why it is doing this
+	and as of now I don't have a solution.)
+
+Upcoming Features (Current outlook of what features will be added to the game. Not set in stone and might be scrapped or postponed!):
+	-Working "Start" button
+	-Game map
+	-Rudimentary implementation of the game logic
