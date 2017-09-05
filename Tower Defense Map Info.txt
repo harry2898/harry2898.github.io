@@ -1,0 +1,15 @@
+Map Top Left: (-540, 360)
+Map Top Right: (540, 360)
+Map Bottom Left: (-540, -360)
+Map Bottom Right: (540, -360)
+Tile Size (L x H) (X x Y): 30 x 30
+Map Tile Size (L x H) (X x Y): 36 x 24
+
+
+Screen Top Left: (-960, 540)
+Screen Top Right: (960, 540)
+Screen Bottom Left: (-960, -540)
+Screen Bottom Right: (960, -540)
+
+Gap Left: 420
+Gap Right: 420
