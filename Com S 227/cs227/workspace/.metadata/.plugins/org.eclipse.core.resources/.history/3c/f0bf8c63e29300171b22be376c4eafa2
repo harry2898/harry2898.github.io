@@ -1,0 +1,9 @@
+package lab2;
+
+public class BasketballTest {
+	public static void main(String[] args){
+		Basketball b;
+		b = new Basketball(4.0);
+	}
+	
+}
