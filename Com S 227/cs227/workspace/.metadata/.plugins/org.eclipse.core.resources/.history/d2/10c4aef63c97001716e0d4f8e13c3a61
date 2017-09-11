@@ -2,7 +2,6 @@ package lab2;
 
 public class BasketballTest {
 	public static void main(String[] args){
-		
 		Basketball b;
 		b = new Basketball(4.0);
 		
@@ -18,4 +17,5 @@ public class BasketballTest {
 		System.out.println(b.isDribbleable());
 		System.out.println(b2.isDribbleable());
 	}
+	
 }
