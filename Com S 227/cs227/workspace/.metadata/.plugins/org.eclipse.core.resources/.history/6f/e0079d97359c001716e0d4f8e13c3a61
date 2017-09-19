@@ -1,0 +1,69 @@
+package hw1;
+
+public class Traveler {
+	
+	private int moneyLeft;
+	
+	private City currentCity;
+	
+	private String journal;
+	
+	public static final int SYMPATHY_FACTOR = 30;
+	
+	public Traveler(int initialFunds, City initialCity)
+	{
+		moneyLeft = initialFunds;
+		currentCity = initialCity;
+		journal = (initialCity + "(start)");
+	}
+	
+	public City getCurrentCity()
+	{
+		return currentCity;
+	}
+	
+	public int getCurrentFunds()
+	{
+		return moneyLeft;
+	}
+	
+	public String getJournal()
+	{
+		return journal;
+	}
+	
+	public boolean isSOL()
+	{
+		
+	}
+	
+	public int getTotalNightsInTrainStation()
+	{
+		
+	}
+	
+	public void visit(City c, int numNights)
+	{
+		
+	}
+	
+	public void sendPostcardsHome(int howMany)
+	{
+		
+	}
+	
+	public void callHomeForMoney()
+	{
+		
+	}
+	
+}
+
+
+
+
+
+
+
+
+

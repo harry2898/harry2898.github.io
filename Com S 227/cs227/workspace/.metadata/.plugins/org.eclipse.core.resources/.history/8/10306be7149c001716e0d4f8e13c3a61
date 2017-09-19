@@ -1,0 +1,37 @@
+package hw1;
+
+public class City {
+	
+	public static final double RELATIVE_COST_OF_POSTCARD = 	0.05;
+	
+	public City(String givenName, int givenLodgingCost)
+	{
+		
+	}
+	
+	public String getName()
+	{
+		
+	}
+	
+	public int lodgingCost()
+	{
+		
+	}
+	
+	public int costToSendPostcard()
+	{
+		
+	}
+	
+	public int maxLengthOfStay(int funds)
+	{
+		
+	}
+	
+	public int maxNumberOfPostcards(int funds)
+	{
+		
+	}
+	
+}

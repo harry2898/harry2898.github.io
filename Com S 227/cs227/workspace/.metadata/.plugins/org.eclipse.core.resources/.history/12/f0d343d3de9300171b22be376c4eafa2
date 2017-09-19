@@ -1,8 +1,0 @@
-package lab2;
-
-public class StringTest {
-	public static void main(String[] args){
-		message = "Hello, world!";
-		System.out.println(message);
-	}
-}

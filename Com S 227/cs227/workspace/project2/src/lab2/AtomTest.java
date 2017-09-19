@@ -12,7 +12,12 @@ public class AtomTest {
 		Uranium238.getAtomicCharge();
 		System.out.println(Uranium238.getAtomicCharge());
 		
-		Uranium238.decay()
-		System.out.println(Uranium238.decay());
+		Uranium238.decay();
+
+		Uranium238.getAtomicMass();
+		System.out.println(Uranium238.getAtomicMass());
+		
+		Uranium238.getAtomicCharge();
+		System.out.println(Uranium238.getAtomicCharge());
 	}
 }

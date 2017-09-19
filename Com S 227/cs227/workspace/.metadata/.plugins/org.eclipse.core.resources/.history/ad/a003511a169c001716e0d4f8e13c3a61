@@ -1,0 +1,14 @@
+package hw1;
+
+public class CityTest {
+	public static void main(String args)
+	{
+		City c = new City("Paris", 75);
+		
+		System.out.println("Expecting: 'Paris'");
+		System.out.println("Result: " + c.getName());
+		
+		System.out.println("Expecting: '75'");
+		System.out.println("Result: " + c.lodgingCost());
+	}
+}
