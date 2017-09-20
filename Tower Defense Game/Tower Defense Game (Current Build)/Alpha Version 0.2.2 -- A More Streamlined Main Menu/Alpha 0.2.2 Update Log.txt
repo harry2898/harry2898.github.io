@@ -1,0 +1,40 @@
+Alpha Version 0.2.2 -- "A More Streamlined Main Menu" -- July 20th, 2017 3:00 AM Central Standard Time
+
+Intentions for Alpha and Beyond:
+	-My goal for the alpha verion of the game is to make a playable game that works. It will more than likely not be pretty and always smooth, but it will work (most
+	of the time).
+	-For beta I'll look to make the game cleaner and less like an 8bit game from the 80s. Additionally I'll be expanding on the features of the game from just basic test
+	maps, towers, enemies, etc. to a more complete list that would be expected of a full game. I'll also stream line the usability of all aspects of the game, as well as
+	refine and rework the core game logic to be complete and smooth.
+	-For the complete release of the game out of the development stage, the game should look and feel complete. There should be minimal bugs, no obvious issues, and not
+	have a "this doesn't feel polished" look to it. Obviously it won't be perfect and I anticipate to update it more after release.
+
+Overview (My interpretation of the update):
+	-As you can see with the release date between Alpha 0.2.0 and Alpha 0.2.1 there was quite a bit of time that I took off. After coming back I needed to refresh myself
+	on how and why I wrote my code in the way it was. During this studying and reflection I found my error on why there was a need to click the "Start" and "Exit" buttons 
+	twice. Through this I decided to take a deaper look at the main menu code and decided to remove the option under the "Exit" button on whether or not you wanted to exit 
+	as it caused more issues than solutions at this time and really didn't need to be included yet as it would of been revamped in the future anyways. Additionally I found 
+	a solution to both the "Reset" button not working outside of my desktop and it closing the entire window and reopening it (Arguably this button could be removed at this
+	point as it has served its purpose, but I don't think it's worth removing yet). In total this streamlining of the main menu has decreased the code required for it by
+	40 lines from 109 to 69 ;) also look at how much shorter the bugs list is!
+
+New Features/ Changes (Features that have been implemented into the game since the last update or changed.):
+	-Fixed bug where you had to click the "Start" and "Exit" buttons twice for them to work
+	-Removed option under the "Exit" button on whether you wanted to exit or not
+	-Fix two bugs with the "Reset" button: 
+		-"Reset" button should now work anywhere and not just on my desktop
+		-When you press the "Reset" button it will no longer close the entire window but rather just reset the current window
+
+Code Tweaks (Things that I have done to the code since the last update.):
+	-Removed function reset_button()
+	-Removed function start_function(x, y)
+	-Removed function exit_button(x, y)
+	-Tweaked then added the contents of the above functions to be included under the function main_buttons(x, y)
+	-Removed the os and sys modules as they were no longer needed.
+
+Current Known Bugs (Bugs that are in the game that I know of and am in the process of fixing.):
+	-On the bottom side of the map the tiles are not even. (Not necessarily a bug but doesn't look good either.)
+
+Upcoming Features (Current outlook of what features will be added to the game. Not set in stone and might be scrapped or postponed!):
+	-Finish "Test Map" UI
+	-Implementation of rudimentary game logic
