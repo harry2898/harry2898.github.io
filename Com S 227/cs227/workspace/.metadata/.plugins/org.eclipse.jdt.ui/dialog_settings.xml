@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\Users\Harrison-Laptop\Desktop" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="C:\Users\Harrison-Laptop\Downloads" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="javadoc">
 		<item value="public" key="access"/>
 		<item value="false" key="noindex"/>
@@ -55,7 +55,7 @@
 		<item value="true" key="create_unimplemented"/>
 	</section>
 	<section name="ClasspathContainerSelectionPage">
-		<item value="0" key="index"/>
+		<item value="1" key="index"/>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
