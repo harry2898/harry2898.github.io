@@ -5,6 +5,32 @@ package hw2;
  * @author Harrison Helgevold
  */
 public class ClockRadio {
+	
+	private int timeMinutesPastMidnight;
+	
+	private int timeHours;
+	
+	private int timeMinutes;
+	
+	private String timeAmOrPm;
+	
+	private int timeMilitaryHours;
+	
+	private int alarmMinutesPastMidnight;
+	
+	private int alarmHours;
+	
+	private int alarmMinutes;
+	
+	private String alarmAmOrPm;
+	
+	private int alarmMilitaryHours;
+	
+	private boolean alarmStatus;
+	
+	private boolean militaryMode;
+	
+	private boolean radioMode;
 
 	/**
 	 * Number of minutes in a 24-hour day.
@@ -23,7 +49,22 @@ public class ClockRadio {
 	 */
 	public ClockRadio()
 	{
+		timeMinutesPastMidnight = 0;
+		timeHours = 0;
+		timeMinutes = 0;
+		timeAmOrPm = "AM";
+		timeMilitaryHours = 0;
 		
+		if (militaryMode == false)
+		{
+			timeHours = 12;
+		}
+		
+		alarmMinutesPastMidnight = 60;
+		alarmHours = 1;
+		alarmMinutes = 0;
+		alarmAmOrPm = "AM";
+		alarmMilitaryHours = 1;
 	}
 	
 	/**
@@ -34,7 +75,41 @@ public class ClockRadio {
 	 */
 	public ClockRadio(int givenMinutesPastMidnight)
 	{
+		timeMinutesPastMidnight = givenMinutesPastMidnight;
+		while (timeMinutesPastMidnight >= MINUTES_PER_DAY)
+		{
+			timeMinutesPastMidnight = timeMinutesPastMidnight - MINUTES_PER_DAY;
+		}
 		
+		timeHours = timeMinutesPastMidnight / 60;
+		timeMinutes = timeMinutesPastMidnight % 60;
+		
+		timeMilitaryHours = timeHours;
+		
+		if (timeHours >= 13)
+		{
+			timeAmOrPm = "PM";
+			timeHours = timeHours - 12;
+		}
+		else if (timeHours >= 12)
+		{
+			timeAmOrPm = "PM";
+		}
+		else if (timeHours == 0)
+		{
+			timeAmOrPm = "AM";
+			timeHours = 12;
+		}
+		else
+		{
+			timeAmOrPm = "AM";
+		}
+		
+		alarmMinutesPastMidnight = 60;
+		alarmHours = 1;
+		alarmMinutes = 0;
+		alarmAmOrPm = "AM";
+		alarmMilitaryHours = 1;
 	}
 	
 	/**
@@ -45,7 +120,35 @@ public class ClockRadio {
 	 */
 	public void advanceTime(int givenMinutes)
 	{
+		timeMinutesPastMidnight = timeMinutesPastMidnight + givenMinutes;
+		while (timeMinutesPastMidnight >= MINUTES_PER_DAY)
+		{
+			timeMinutesPastMidnight = timeMinutesPastMidnight - MINUTES_PER_DAY;
+		}
 		
+		timeHours = timeMinutesPastMidnight / 60;
+		timeMinutes = timeMinutesPastMidnight % 60;
+		
+		timeMilitaryHours = timeHours;
+		
+		if (timeHours >= 13)
+		{
+			timeAmOrPm = "PM";
+			timeHours = timeHours - 12;
+		}
+		else if (timeHours >= 12)
+		{
+			timeAmOrPm = "PM";
+		}
+		else if (timeHours == 0)
+		{
+			timeAmOrPm = "AM";
+			timeHours = 12;
+		}
+		else
+		{
+			timeAmOrPm = "AM";
+		}
 	}
 	
 	/**
@@ -55,9 +158,37 @@ public class ClockRadio {
 	 * @param givenMInutes The number of minutes the clock
 	 * will be moved forward in addition to the hours.
 	 */
-	public void advanceTime(int givenHours, int givenMInutes)
+	public void advanceTime(int givenHours, int givenMinutes)
 	{
+		timeMinutesPastMidnight = timeMinutesPastMidnight + givenMinutes + givenHours * 60;
+		while (timeMinutesPastMidnight >= MINUTES_PER_DAY)
+		{
+			timeMinutesPastMidnight = timeMinutesPastMidnight - MINUTES_PER_DAY;
+		}
 		
+		timeHours = timeMinutesPastMidnight / 60;
+		timeMinutes = timeMinutesPastMidnight % 60;
+		
+		timeMilitaryHours = timeHours;
+		
+		if (timeHours >= 13)
+		{
+			timeAmOrPm = "PM";
+			timeHours = timeHours - 12;
+		}
+		else if (timeHours >= 12)
+		{
+			timeAmOrPm = "PM";
+		}
+		else if (timeHours == 0)
+		{
+			timeAmOrPm = "AM";
+			timeHours = 12;
+		}
+		else
+		{
+			timeAmOrPm = "AM";
+		}
 	}
 	
 	/**
@@ -67,7 +198,7 @@ public class ClockRadio {
 	 */
 	public void alarmDisabled()
 	{
-		
+		alarmStatus = false;
 	}
 	
 	/**
@@ -75,7 +206,7 @@ public class ClockRadio {
 	 */
 	public void alarmEnabled()
 	{
-		
+		alarmStatus = true;
 	}
 	
 	/**
@@ -87,7 +218,45 @@ public class ClockRadio {
 	 */
 	public String getAlarmTimeAsString()
 	{
-		return "dummy";
+		String hour = "";
+		String minutes = "";
+		
+		String militaryHour = "";
+		
+		if (alarmHours < 10)
+		{
+			hour = "0" + alarmHours;
+		}
+		else
+		{
+			hour = "" + alarmHours;
+		}
+		if (alarmMinutes < 10)
+		{
+			minutes = "0" + alarmMinutes;
+		}
+		else
+		{
+			minutes = "" + alarmMinutes;
+		}
+		
+		if (alarmMilitaryHours < 10)
+		{
+			militaryHour = "0" + alarmMilitaryHours;
+		}
+		else
+		{
+			militaryHour = "" + alarmMilitaryHours;
+		}
+		
+		if (militaryMode == true)
+		{
+			return militaryHour + ":" + minutes;
+		}
+		else
+		{
+			return hour + ":" + minutes + " " + alarmAmOrPm;
+		}
 	}
 	
 	/**
@@ -98,7 +267,7 @@ public class ClockRadio {
 	 */
 	public int getAlarmTimeRaw()
 	{
-		return 0;
+		return alarmMinutesPastMidnight;
 	}
 	
 	/**
@@ -110,7 +279,45 @@ public class ClockRadio {
 	 */
 	public String getClockTimeAsString()
 	{
-		return "dummy";
+		String hour = "";
+		String minutes = "";
+		
+		String militaryHour = "";
+		
+		if (timeHours < 10)
+		{
+			hour = "0" + timeHours;
+		}
+		else
+		{
+			hour = "" + timeHours;
+		}
+		if (timeMinutes < 10)
+		{
+			minutes = "0" + timeMinutes;
+		}
+		else
+		{
+			minutes = "" + timeMinutes;
+		}
+		
+		if (timeMilitaryHours < 10)
+		{
+			militaryHour = "0" + timeMilitaryHours;
+		}
+		else
+		{
+			militaryHour = "" + timeMilitaryHours;
+		}
+		
+		if (militaryMode == true)
+		{
+			return militaryHour + ":" + minutes;
+		}
+		else
+		{
+			return hour + ":" + minutes + " " + timeAmOrPm;
+		}
 	}
 	
 	/**
@@ -121,7 +328,7 @@ public class ClockRadio {
 	 */
 	public int getClockTimeRaw()
 	{
-		return 0;
+		return timeMinutesPastMidnight;
 	}
 	
 	/**
@@ -129,7 +336,7 @@ public class ClockRadio {
 	 * one of the following forms, depending on whether the 
 	 * clock is currently in 24-hour mode: "hh:mm", "hh:mm AM", 
 	 * or "hh:mm PM".
-	 * @return The time the alarm is to.
+	 * @return The time the alarm is set to.
 	 */
 	public String getEffectiveAlarmTimeAsString()
 	{
@@ -187,7 +394,14 @@ public class ClockRadio {
 	 */
 	public void set24HourDisplay(boolean use24HourDisplay)
 	{
-		
+		if (use24HourDisplay == true)
+		{
+			militaryMode = true;
+		}
+		else
+		{
+			militaryMode = false;
+		}
 	}
 	
 	/**
@@ -198,7 +412,35 @@ public class ClockRadio {
 	 */
 	public void setAlarmTime(int givenMinutesPastMidnight)
 	{
+		alarmMinutesPastMidnight = givenMinutesPastMidnight;
+		while (alarmMinutesPastMidnight >= MINUTES_PER_DAY)
+		{
+			alarmMinutesPastMidnight = alarmMinutesPastMidnight - MINUTES_PER_DAY;
+		}
 		
+		alarmHours = alarmMinutesPastMidnight / 60;
+		alarmMinutes = alarmMinutesPastMidnight % 60;
+		
+		alarmMilitaryHours = alarmHours;
+		
+		if (alarmHours >= 13)
+		{
+			alarmAmOrPm = "PM";
+			alarmHours = alarmHours - 12;
+		}
+		else if (timeHours >= 12)
+		{
+			alarmAmOrPm = "PM";
+		}		
+		else if (timeHours == 0)
+		{
+			alarmAmOrPm = "AM";
+			alarmHours = 12;
+		}
+		else
+		{
+			alarmAmOrPm = "AM";
+		}
 	}
 	
 	/**
@@ -209,7 +451,31 @@ public class ClockRadio {
 	 */
 	public void setAlarmTime(int givenHours, int givenMinutes, boolean isPm)
 	{
-		
+		alarmHours = givenHours;
+		alarmMinutes = givenMinutes;
+		int additionalMinutes = 0;
+		if (isPm == true)
+		{
+			alarmAmOrPm = "PM";
+			additionalMinutes = 720;
+			
+			if(alarmHours == 12)
+			{
+				alarmMilitaryHours = givenHours;
+				alarmMinutesPastMidnight = givenHours * 60 + givenMinutes;
+			}
+			else
+			{
+				alarmMilitaryHours = givenHours + 12;
+				alarmMinutesPastMidnight = givenHours * 60 + givenMinutes + additionalMinutes;
+			}
+		}
+		else
+		{
+			alarmAmOrPm = "AM";
+			alarmMilitaryHours = alarmHours;
+			alarmMinutesPastMidnight = givenHours * 60 + givenMinutes;
+		}
 	}
 	
 	/**
@@ -219,7 +485,14 @@ public class ClockRadio {
 	 */
 	public void setRadioMode(boolean useRadio)
 	{
-		
+		if (useRadio == true)
+		{
+			radioMode = true;
+		}
+		else
+		{
+			radioMode = false;
+		}
 	}
 	
 	/**
@@ -230,7 +503,35 @@ public class ClockRadio {
 	 */
 	public void setTime(int givenMinutesPastMidnight)
 	{
+		timeMinutesPastMidnight = givenMinutesPastMidnight;
+		while (timeMinutesPastMidnight >= MINUTES_PER_DAY)
+		{
+			timeMinutesPastMidnight = timeMinutesPastMidnight - MINUTES_PER_DAY;
+		}
 		
+		timeHours = timeMinutesPastMidnight / 60;
+		timeMinutes = timeMinutesPastMidnight % 60;
+		
+		timeMilitaryHours = timeHours;
+		
+		if (timeHours >= 13)
+		{
+			timeAmOrPm = "PM";
+			timeHours = timeHours - 12;
+		}
+		else if (timeHours >= 12)
+		{
+			timeAmOrPm = "PM";
+		}
+		else if (timeHours == 0)
+		{
+			timeAmOrPm = "AM";
+			timeHours = 12;
+		}
+		else
+		{
+			timeAmOrPm = "AM";
+		}
 	}
 	
 	/**
@@ -242,7 +543,31 @@ public class ClockRadio {
 	 */
 	public void setTime(int givenHours, int givenMinutes, boolean isPm)
 	{
-		
+		timeHours = givenHours;
+		timeMinutes = givenMinutes;
+		int additionalMinutes = 0;
+		if (isPm == true)
+		{
+			timeAmOrPm = "PM";
+			additionalMinutes = 720;
+			
+			if(timeHours == 12)
+			{
+				timeMilitaryHours = givenHours;
+				timeMinutesPastMidnight = givenHours * 60 + givenMinutes;
+			}
+			else
+			{
+				timeMilitaryHours = givenHours + 12;
+				timeMinutesPastMidnight = givenHours * 60 + givenMinutes + additionalMinutes;
+			}
+		}
+		else
+		{
+			timeAmOrPm = "AM";
+			timeMilitaryHours = timeHours;
+			timeMinutesPastMidnight = givenHours * 60 + givenMinutes;
+		}
 	}
 	
 	/**

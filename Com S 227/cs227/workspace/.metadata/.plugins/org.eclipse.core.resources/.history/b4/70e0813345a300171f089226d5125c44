@@ -1,0 +1,108 @@
+package hw2;
+
+public class ClockRadioTest {
+	public static void main(String[] args)
+	{
+		ClockRadio r = new ClockRadio();
+		System.out.println("New Standard Radio Constructed");
+		System.out.println(" ");
+		
+		r.set24HourDisplay(true);
+		System.out.println("Military Mode Activated");
+		System.out.println(" ");
+		
+		System.out.println("Get Alarm Time in Military Mode");
+		System.out.println("Expecting: '01:00'");
+		System.out.println("Result: " + r.getAlarmTimeAsString());
+		System.out.println(" ");
+
+		r.set24HourDisplay(false);
+		System.out.println("Military Mode Deactivated");
+		System.out.println(" ");
+		
+		System.out.println("Get Alarm Time in Standard Mode");
+		System.out.println("Expecting: '01:00 AM'");
+		System.out.println("Result: " + r.getAlarmTimeAsString());
+		System.out.println(" ");
+		
+		System.out.println("Get Alarm Time in Raw Mode");
+		System.out.println("Expecting: '60'");
+		System.out.println("Result: " + r.getAlarmTimeRaw());
+		System.out.println(" ");
+		
+		r.set24HourDisplay(true);
+		System.out.println("Military Mode Activated");
+		System.out.println(" ");
+		
+		System.out.println("Get Clock Time in Military Mode");
+		System.out.println("Expecting: '00:00'");
+		System.out.println("Result: " + r.getClockTimeAsString());
+		System.out.println(" ");
+
+		r.set24HourDisplay(false);
+		System.out.println("Military Mode Deactivated");
+		System.out.println(" ");
+		
+		System.out.println("Get Clock Time in Standard Mode");
+		System.out.println("Expecting: '12:00 AM'");
+		System.out.println("Result: " + r.getClockTimeAsString());
+		System.out.println(" ");
+		
+		System.out.println("Get Clock Time in Raw Mode");
+		System.out.println("Expecting: '0'");
+		System.out.println("Result: " + r.getClockTimeRaw());
+		System.out.println(" ");
+		
+		r = new ClockRadio(320);
+		System.out.println("New Advanced Radio Constructed. Set to: '320'");
+		System.out.println(" ");
+		
+		r.set24HourDisplay(true);
+		System.out.println("Military Mode Activated");
+		System.out.println(" ");
+		
+		System.out.println("Get Alarm Time in Military Mode");
+		System.out.println("Expecting: '01:00'");
+		System.out.println("Result: " + r.getAlarmTimeAsString());
+		System.out.println(" ");
+
+		r.set24HourDisplay(false);
+		System.out.println("Military Mode Deactivated");
+		System.out.println(" ");
+		
+		System.out.println("Get Alarm Time in Standard Mode");
+		System.out.println("Expecting: '01:00 AM'");
+		System.out.println("Result: " + r.getAlarmTimeAsString());
+		System.out.println(" ");
+		
+		System.out.println("Get Alarm Time in Raw Mode");
+		System.out.println("Expecting: '60'");
+		System.out.println("Result: " + r.getAlarmTimeRaw());
+		System.out.println(" ");
+		
+		r.set24HourDisplay(true);
+		System.out.println("Military Mode Activated");
+		System.out.println(" ");
+		
+		System.out.println("Get Clock Time in Military Mode");
+		System.out.println("Expecting: '05:20'");
+		System.out.println("Result: " + r.getClockTimeAsString());
+		System.out.println(" ");
+
+		r.set24HourDisplay(false);
+		System.out.println("Military Mode Deactivated");
+		System.out.println(" ");
+		
+		System.out.println("Get Clock Time in Standard Mode");
+		System.out.println("Expecting: '5:20 AM'");
+		System.out.println("Result: " + r.getClockTimeAsString());
+		System.out.println(" ");
+		
+		System.out.println("Get Clock Time in Raw Mode");
+		System.out.println("Expecting: '320'");
+		System.out.println("Result: " + r.getClockTimeRaw());
+		System.out.println(" ");
+		
+		
+	}
+}

@@ -1,0 +1,15 @@
+package hw2;
+
+public class ClockRadioTest {
+	public static void main(String[] args)
+	{
+		ClockRadio r = new ClockRadio();
+		
+		r.set24HourDisplay(true);
+		
+		System.out.println("Get Clock Time");
+		System.out.println("Expecting: '1:00 AM'");
+		System.out.println("Result: " + r.getAlarmTimeAsString());
+		System.out.println(" ");
+	}
+}
