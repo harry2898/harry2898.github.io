@@ -213,20 +213,13 @@ public class ClockRadio {
 			timeAmOrPm = "AM";
 		}
 		
-		if (alarmMinutesPastMidnight < priorMinutesPastMidnight)
-		{
-			if (alarmStatus == true && timeMinutesPastMidnight > alarmMinutesPastMidnight)
-			{
-				soundingStatus = true;
-			}
-			else
-			{
-				soundingStatus = false;
-			}
-		}
-		else if (alarmStatus == true && increasingMinutes > (alarmMinutesPastMidnight - priorMinutesPastMidnight))
+		if (alarmStatus == true && priorMinutesPastMidnight > alarmMinutesPastMidnight)
 		{
 			soundingStatus = true;
+		}
+		else if ()
+		{
+			
 		}
 		else
 		{
