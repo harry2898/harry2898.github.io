@@ -31,8 +31,6 @@ public class ClockRadio {
 	private boolean militaryMode;
 	
 	private boolean radioMode;
-	
-	private boolean soundingStatus;
 
 	/**
 	 * Number of minutes in a 24-hour day.
@@ -67,11 +65,6 @@ public class ClockRadio {
 		alarmMinutes = 0;
 		alarmAmOrPm = "AM";
 		alarmMilitaryHours = 1;
-		
-		alarmStatus = false;
-		militaryMode = true;
-		radioMode = false;
-		soundingStatus = false;
 	}
 	
 	/**
@@ -117,11 +110,6 @@ public class ClockRadio {
 		alarmMinutes = 0;
 		alarmAmOrPm = "AM";
 		alarmMilitaryHours = 1;
-		
-		alarmStatus = false;
-		militaryMode = true;
-		radioMode = false;
-		soundingStatus = false;
 	}
 	
 	/**
@@ -161,15 +149,6 @@ public class ClockRadio {
 		{
 			timeAmOrPm = "AM";
 		}
-		
-		if (alarmStatus == true && timeMinutesPastMidnight > alarmMinutesPastMidnight)
-		{
-			soundingStatus = true;
-		}
-		else
-		{
-			soundingStatus = false;
-		}
 	}
 	
 	/**
@@ -181,9 +160,7 @@ public class ClockRadio {
 	 */
 	public void advanceTime(int givenHours, int givenMinutes)
 	{
-		int priorMinutesPastMidnight = timeMinutesPastMidnight;
-		int increasingMinutes = givenMinutes + givenHours * 60;
-		timeMinutesPastMidnight = timeMinutesPastMidnight + increasingMinutes;
+		timeMinutesPastMidnight = timeMinutesPastMidnight + givenMinutes + givenHours * 60;
 		while (timeMinutesPastMidnight >= MINUTES_PER_DAY)
 		{
 			timeMinutesPastMidnight = timeMinutesPastMidnight - MINUTES_PER_DAY;
@@ -211,19 +188,6 @@ public class ClockRadio {
 		else
 		{
 			timeAmOrPm = "AM";
-		}
-		
-		if (alarmStatus == true && priorMinutesPastMidnight > alarmMinutesPastMidnight)
-		{
-			soundingStatus = true;
-		}
-		else if ()
-		{
-			
-		}
-		else
-		{
-			soundingStatus = false;
 		}
 	}
 	
@@ -320,6 +284,14 @@ public class ClockRadio {
 		
 		String militaryHour = "";
 		
+		if (timeHours < 10)
+		{
+			hour = "0" + timeHours;
+		}
+		else
+		{
+			hour = "" + timeHours;
+		}
 		if (timeMinutes < 10)
 		{
 			minutes = "0" + timeMinutes;
@@ -389,14 +361,7 @@ public class ClockRadio {
 	 */
 	public boolean isBuzzing()
 	{
-		if (soundingStatus == true && radioMode == false)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return true;
 	}
 	
 	/**
@@ -407,14 +372,7 @@ public class ClockRadio {
 	 */
 	public boolean isPlayingRadio()
 	{
-		if (soundingStatus == true && radioMode == true)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return true;
 	}
 	
 	/**
@@ -425,7 +383,7 @@ public class ClockRadio {
 	 */
 	public boolean isSounding()
 	{
-		return soundingStatus;
+		return true;
 	}
 	
 	/**

@@ -60,9 +60,13 @@ public class ClockRadioTest {
 		r.set24HourDisplay(false);
 		
 		System.out.println("Get Clock Time in Standard Mode. Expecting: '12:00 AM' Result: " + r.getClockTimeAsString());
+		System.out.println("Expecting: '12:00 AM'");
+		System.out.println("Result: " + r.getClockTimeAsString());
 		System.out.println();
 		
-		System.out.println("Get Clock Time in Raw Mode. Expecting: '0' Result: " + r.getClockTimeRaw());
+		System.out.println("Get Clock Time in Raw Mode");
+		System.out.println("Expecting: '0'");
+		System.out.println("Result: " + r.getClockTimeRaw());
 		System.out.println();
 		
 		r = new ClockRadio(320);
@@ -1451,6 +1455,5 @@ public class ClockRadioTest {
 		System.out.println();
 
 		System.out.println("Get Clock Time in Raw Mode. Expecting: '1096' Result: " + r.getClockTimeRaw());
-		System.out.println();
 	}
 }
