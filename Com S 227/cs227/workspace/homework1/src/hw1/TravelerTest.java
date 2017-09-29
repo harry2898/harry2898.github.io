@@ -1,5 +1,7 @@
 package hw1;
 
+import hw2.ClockRadio;
+
 public class TravelerTest {
 	public static void main(String[] args)
 	{

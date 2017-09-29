@@ -1,0 +1,9 @@
+package hw1;
+
+public class ClassRadioTestMethods {
+	
+	public String constructorTests()
+	{
+		return "Constructor Tests";
+	}
+}
