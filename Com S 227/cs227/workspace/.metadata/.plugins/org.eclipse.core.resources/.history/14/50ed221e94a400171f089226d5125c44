@@ -1,9 +1,0 @@
-package hw2;
-
-public class ClassRadioTestMethods {
-	
-	public String constructorTests()
-	{
-		return "Constructor Tests";
-	}
-}
