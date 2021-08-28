@@ -10,7 +10,6 @@
         <div class="header-content">
             <div class="header-content-inner">
                 <h1>Dramatically Engage</h1>
-                <p></p>
                 <a href="https://harry2898.github.io/loginportal" class="btn btn-primary btn-lg">Engage Now</a>
             </div>
         </div>
