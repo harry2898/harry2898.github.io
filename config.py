@@ -28,7 +28,7 @@ bgColorB = 0
 #Display Size:
 
 #Number of pixels wide the display is within the window:
-displayWidth = 64
+displayWidth = 32
 
 #Number of pixels high the display is within the window:
-displayHeight = 48
+displayHeight = 24
