@@ -1,4 +1,4 @@
-from physics_config import *
+from config import *
 
 totalLeftBuffer = surroundingBuffer + leftBuffer    
 totalRightBuffer = surroundingBuffer + rightBuffer

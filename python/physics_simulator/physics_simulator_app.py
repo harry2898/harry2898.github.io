@@ -4,10 +4,10 @@ import math
 import time
 import numpy as np
 
-from physics_config import *
-from physics_calculations import *
-from physics_utils import *
-from physics_debug import *
+from config import *
+from calculations import *
+from utils import *
+from debugger_tool import *
 
 def start():    
     screen = turtle.Screen()

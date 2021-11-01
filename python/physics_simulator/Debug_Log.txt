@@ -6,14 +6,3 @@
 ||                               Values Given or Set in Config (constants)                               ||
 ||  Test to see if left allign works.                                                                    ||
 ||  Graph Dimensions               | graphSize=           | [1000, 600]          | [700, 900]            ||
-||	Surrounding Buffer Width:   surroundingBuffer = 25
-Left Buffer Width:   leftBuffer = 150
-Right Buffer Width:   rightBuffer = 0
-Top Buffer Height:   topBuffer = 0
-Bottom Buffer Height:   bottomBuffer = 0
-Turtle() Default Screen Buffer Size:   defaultBuffer = 20
-
-Values Anticipated (calculated by physics_debug.py)		|		Values Calculated and Used (by physics_app.py)
-Screen Dimensions: [1200, 650]
-Values Calculated and Used (by physics_app.py):
-Screen dimensions:   screenSize = [1220, 670]

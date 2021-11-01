@@ -8,6 +8,7 @@ lineEnd = "  ||\n"
 doubleDashLineStart = "|==="
 doubleDashLineEnd = "===|\n"
 tab = "\t"
+nextLine = "\n"
 columnLine = " | "
 
 pageCharWidth = 107
