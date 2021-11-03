@@ -1,9 +1,8 @@
 import math
 import turtle
 import time
-from config import *
+from config_version_one import *
 import numpy as np
-import random
 
 def pyrtle_engine():
     turtle.tracer(0,0)
@@ -13,20 +12,20 @@ def pyrtle_engine():
         turtle.bgcolor(bgColorR, bgColorG, bgColorB)
     else:
         turtle.bgcolor(bgColor)
-    turtle.setup(windowWidth+15, windowHeight+15)
+    turtle.setup(windowWidth, windowHeight)
     turtle.title(windowTitle)
 
     #Calculations
     pixelWidth = windowWidth // displayWidth
     pixelHeight = windowHeight // displayHeight
-    startingX = windowWidth / 2 * -1 - pixelWidth /1.5
-    startingY = windowHeight / 2 * 1 + pixelHeight /1.5
+    startingX = windowWidth / 2 * -1 - pixelWidth
+    startingY = windowHeight / 2 * 1 + pixelHeight
     totalPixels = displayWidth * displayHeight
     x = startingX
     y = startingY    
 
     #Pixel color for testing
-    #pixelColor = "black"
+    pixelColor = "black"
     
     #numpy is (rows, columns) or (y,x)
     pixelCoords = np.zeros((displayHeight,displayWidth,2))
@@ -48,28 +47,25 @@ def pyrtle_engine():
         if arrayCol >= displayWidth:
             arrayRow += 1
             arrayCol = 0    
-    #pixelScale = .45 for 64 x 48   ---    .95 for 32 x 24     ---    1.95 for 16 x 12
-    pixelScale = .95
+    
     pixel = turtle.Turtle()
-    #pixel.hideturtle()
-    pixel.shape("square")
-    pixel.resizemode("user")
-    #pixel.shapesize(pixelWidth,pixelHeight)
-    pixel.shapesize(pixelScale,pixelScale,0)
-    pixel.penup()
+    pixel.hideturtle()
+    pixel.pensize(1)
     
     #Setting variables for loop
     xPos = 0
     yPos = 0
     run = 1
+    count = 0
     
-    pixelStartTime = time.time()
+    pixelStartTime = time.time() 
     
     while(run == 1):
-        p_color_r = random.randrange(255)
-        p_color_g = random.randrange(255)
-        p_color_b = random.randrange(255)
-        draw_pixel(pixelCoords[yPos,xPos,0], pixelCoords[yPos,xPos,1], p_color_r, p_color_g, p_color_b, pixelStartTime, pixel)
+        #count += 1
+        #print("Pixel Number:", count)
+        #pixelStartTime = time.time()        
+        
+        draw_pixel(pixelCoords[yPos,xPos,0], pixelCoords[yPos,xPos,1], pixelColor, pixelStartTime, pixel)
         xPos += 1
         if xPos >= displayWidth:
             yPos += 1
@@ -81,14 +77,28 @@ def pyrtle_engine():
             pixelStopTime = time.time()
             pixelTime = pixelStopTime - pixelStartTime
             print("Time to draw Frame:", pixelTime)
-            print(1 / pixelTime, " FPS")
             pixelStartTime = time.time()
-            pixel.clearstamps()
-                 
-def draw_pixel(x, y, p_color_r, p_color_g, p_color_b, pixelStartTime, pixel):
+            pixelColor = "Green"
+
+def draw_pixel(x, y, pixelColor, pixelStartTime, pixel):
+    pixel.penup()
     pixel.goto(x,y)
-    turtle.colormode(255)
-    pixel.color(p_color_r,p_color_g,p_color_b)    
-    pixel.stamp()
+    pixel.pencolor(pixelColor)
+    pixel.fillcolor(pixelColor)
+    pixel.setheading(0)
+    pixel.pendown()
+    pixel.begin_fill()
+    for i in range(2):
+        pixel.forward(windowWidth / displayWidth)
+        pixel.right(90)
+        pixel.forward(windowHeight / displayHeight)
+        pixel.right(90)
+    pixel.end_fill()
+    #turtle.update()     
+    #pixelStopTime = time.time()
+    #pixelTime = pixelStopTime - pixelStartTime
+    #print("Time to draw Pixel:", pixelTime)
+    #PPS = 1 / (pixelTime + .0000000000001)
+    #print("Pixels Per Second (PPS):", PPS)
 
 pyrtle_engine()
