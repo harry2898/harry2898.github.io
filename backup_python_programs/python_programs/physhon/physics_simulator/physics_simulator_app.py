@@ -7,7 +7,7 @@ import numpy as np
 from .config import *
 from .calculations import *
 from .utils import *
-from debugython.debugging_tool.debugger_tool import *
+from ...debugython.debugging_tool.debugger_tool import *
 
 def start():    
     screen = turtle.Screen()

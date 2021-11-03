@@ -2,8 +2,8 @@ import turtle
 import os
 import subprocess
 
-from physhon.physics_simulator.config import *
-from physhon.physics_simulator.calculations import *
+from ...physhon.physics_simulator.config import *
+from ...physhon.physics_simulator.calculations import *
 
 from .debugger_config import *
 from .debugger_utils import *
