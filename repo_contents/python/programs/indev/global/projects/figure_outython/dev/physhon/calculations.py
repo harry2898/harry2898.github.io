@@ -1,4 +1,4 @@
-from .config import *
+from physhon.config import *
 
 totalLeftBuffer = surroundingBuffer + leftBuffer    
 totalRightBuffer = surroundingBuffer + rightBuffer

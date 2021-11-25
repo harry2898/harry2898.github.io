@@ -1,14 +1,20 @@
 
 
-space = " "
-dash = "-"
-doubleDash = "="
+#space = chr(32)
+
+#dash = chr(45)
+#doubleDash = chr(61)
+#underscore = chr(95)
+
+
+#tab = "\t"
+#nextLine = "\n"
+
+
 lineStart = "||  "
 lineEnd = "  ||\n"
 doubleDashLineStart = "|==="
 doubleDashLineEnd = "===|\n"
-tab = "\t"
-nextLine = "\n"
 columnLine = " | "
 
 pageCharWidth = 107

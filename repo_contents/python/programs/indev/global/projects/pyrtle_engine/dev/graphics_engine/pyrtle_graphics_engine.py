@@ -1,11 +1,14 @@
 import math
 import turtle
 import time
-from config import *
 import numpy as np
 import random
 
+from config import *
 from performance_tester import *
+
+#from .config import *
+#from .performance_tester import *
 
 #Configures and runs Pyrtle Engine
 def pyrtle_engine():

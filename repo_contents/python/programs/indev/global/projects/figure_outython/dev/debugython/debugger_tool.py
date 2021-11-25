@@ -2,11 +2,10 @@ import turtle
 import os
 import subprocess
 
-from physhon.physics_simulator.config import *
-from physhon.physics_simulator.calculations import *
-
-from .debugger_config import *
-from .debugger_utils import *
+from physhon.config import *
+from physhon.calculations import *
+from debugython.config import *
+from debugython.utils import *
 
 def debug_app(calibrateScreen = True, clearScreen = False, tracerOn = False, printDebugLog = False, autoOpenDebugLog = True, pathOfTextEditor = None):
 

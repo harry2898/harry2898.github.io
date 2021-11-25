@@ -1,6 +1,7 @@
-from .debugger_config import *
-
 from collections.abc import Iterable
+
+from debugython.config import *
+
 
 def blank_line():
     text = multi_char(space, charLineLength, True, True)
@@ -17,31 +18,30 @@ def double_dash_line():
     text = multi_char(doubleDash, charLineLength, True, True)
     return text
 
-def multi_tab(numTabs, beginning = False, end = False, givenList = None, returnList = False):
-    if givenList is None:
-        charList = []
-    else:
-        charList = list(givenList)
+#def multi_tab(numTabs, beginning = False, end = False, givenList = None, returnList = False):
+    #if givenList is None:
+        #charList = []
+    #else:
+        #charList = list(givenList)
     
-    if beginning is True:
-        charList.append(lineStart)
-    for i in range(numTabs):
-        charList.append(tab)
-    if end is True:
-        charList.append(lineEnd)
-    if returnList is True:
-        return charList
-    else:
-        text = ""
-        text = to_string(charList)
-        return text    
+    #if beginning is True:
+        #charList.append(lineStart)
+    #for i in range(numTabs):
+        #charList.append(tab)
+    #if end is True:
+        #charList.append(lineEnd)
+    #if returnList is True:
+        #return charList
+    #else:
+        #text = ""
+        #text = to_string(charList)
+        #return text    
     
 def multi_char(char, numChar, beginning = False, end = False, givenList = None, returnList = False):
     if givenList is None:
         charList = []
     else:
         charList = list(givenList)
-    
     if beginning is True:
         if char == "=":
             charList.append(doubleDashLineStart)
