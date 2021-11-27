@@ -24,7 +24,7 @@ description: A collection of Harry's stuff.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 markdown: redcarpet
-#extensions: [fenced_code_blocks]
+extensions: [fenced_code_blocks]
 twitter_username: jekyllrb
 github_username:  harry2898
 
