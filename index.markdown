@@ -2,8 +2,8 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
-title: "Welcome to Harry's Stuff!"
+#layout: home
+title: "Harry's Stuff!"
 ---
 # Python Guide
 ## Get Everything Installed
@@ -30,26 +30,26 @@ title: "Welcome to Harry's Stuff!"
 	- Type "powershell".
 	- Open "powershell.exe".
 	- Type "python" and press enter.
-	- You should see a couple lines of output about python and your current line should start with '>>>'
+	- You should see a couple lines of output about python and your current line should start with `>>>`
 	- Type:
-	'''python
+	```python
 	print("Hello World")
-	'''
-	- You should see the output: 'Hello World'.
+	```
+	- You should see the output: `Hello World`.
 	- Congrats you just typed and ran your first Python code!
 3. Check that Wing works:
 	- Open "Wing Pro X".
 		- "X" stands for the version of python installed.
 	- Save the file as "wing_test" without parenthesis.
 	- Type:
-	'''python
+	```python
 	x = 69
 	print(x)
-	'''
+	```
 	- Near the top middle press the green play button to run your code.
 	- Click through the text box saving your program.
 		- Select the check box to not show the message again.
-	- Near the bottom middle you should see the output '69'.
+	- Near the bottom middle you should see the output `69`.
 	- Congrats you just ran your first Python program!
 
 ## Basics of Programming
