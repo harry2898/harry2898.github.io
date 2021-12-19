@@ -1,7 +1,7 @@
 import pygame
 
 from pysics_utils.color_constants import *
-from launcher.configs.default import *
+from launcher.configs.default_launcher_config import *
 
 
 def draw_window():
@@ -13,7 +13,7 @@ def main():
     clock = pygame.time.Clock()
     run = True
     while run:
-        clock.tick(FPS_CAP)
+        clock.tick(WIN_FPS_CAP)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
