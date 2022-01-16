@@ -1,0 +1,4 @@
+
+DEBUG_MODE = True
+PRINT_ERRORS = True
+LOG_ERRORS = False
