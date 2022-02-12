@@ -1,0 +1,54 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "practice_map.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "first_attempt.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "paths.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "practice_map.tmx": {
+            "scale": 0.25,
+            "selectedLayer": 12,
+            "viewCenter": {
+                "x": 1560,
+                "y": 2104
+            }
+        },
+        "second_attempt.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1
+        },
+        "test.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        }
+    },
+    "last.imagePath": "C:/Github/harry2898.github.io/repo_contents/tilesets",
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+        "practice_map.tmx",
+        "second_attempt.tsx",
+        "paths.tsx"
+    ],
+    "project": "practice.tiled-project",
+    "recentFiles": [
+        "paths.tsx",
+        "second_attempt.tsx",
+        "practice_map.tmx",
+        "first_attempt.tsx",
+        "test.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.margin": 1,
+    "tileset.spacing": 1,
+    "tileset.useTransparentColor": true
+}

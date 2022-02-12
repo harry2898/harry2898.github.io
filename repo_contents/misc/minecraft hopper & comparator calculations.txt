@@ -1,0 +1,40 @@
+1-22  == 21	0*22+1	1 RS Signal Strength	x-1	x
+23-45 == 22	1*22+1	2 RS Signal Strength	x-1	x-1
+46-68 == 22	2*22+2	3 RS Signal Strength	x-1	x-1
+69-91 == 22	3*22+3	4 RS Signal Strength	x-1	x-1
+
+y = Min Number of Items
+x = RS Signal Strength
+y = 23x - 23
+
+Items	Game Ticks	Time Increased
+1	- (~1)		- (~1)
+2	9		9 (~8)
+3	17		8
+4	25		8
+5	33		8
+6	41		8
+7	49		8
+8	57		8
+16	121		64
+32	249		128
+64	505		256
+
+20 Game Ticks per Real Life Second
+
+Items	~ Game Ticks			Measured Game Ticks	Real Life Seconds
+1 Item = 8 Game Ticks			(~1)			000.05
+2 Item = 16 Game Ticks			9			000.45
+4 Item = 32 Game Ticks			25			001.25
+8 Item = 64 Game Ticks			57			002.85
+16 Item = 128 Game Ticks		121			006.05
+32 Item = 256 Game Ticks		249			012.45
+64 Item = 512 Game Ticks		505			025.25
+128 Item = 1024 Game Ticks		1017			050.85
+192 Item = 1536 Game Ticks		1529			076.45
+256 Item = 2048 Game Ticks		2041			102.05
+320 Item = 2560 Game Ticks		2553			127.65
+
+y = Number of Items
+x = Number of Game Ticks
+y = (x + 7) / 8
