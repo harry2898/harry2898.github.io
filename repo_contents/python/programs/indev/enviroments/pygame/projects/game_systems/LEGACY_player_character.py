@@ -5,8 +5,6 @@ class create_player_character:
         self.sex = sex
         self.classRole = classRole
         
-        #set class role stuff
-        
         self._save_player_character()
         self._update_list_of_player_characters()
     

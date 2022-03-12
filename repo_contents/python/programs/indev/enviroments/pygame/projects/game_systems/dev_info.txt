@@ -1,0 +1,27 @@
+*EXCLUDES GRAPHICS STUFF*
+
+Character Creation:
+    INPUT:
+        Get character's:
+            Name
+            Race
+            Sex
+            Class Role
+    OUTPUT:
+
+
+
+
+
+Class Role:
+    Atributes
+    Stats (Base)
+    Gear (Starting)
+    Abilities
+    Skill tree
+
+
+UI (Interactables):
+    Character (Window)
+    Abilities (Hotbar)
+    Inventory

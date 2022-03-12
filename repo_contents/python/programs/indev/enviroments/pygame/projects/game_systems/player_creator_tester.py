@@ -1,12 +1,21 @@
 from player_character import create_player_character
 
-print("Character Creator")
-name = input("Name: ")
-race = input("Race: ")
-sex = input("Sex: ")
-classRole = input("Class: ")
+manuallyCreateCharacter = False
+
+if manuallyCreateCharacter is True:
+    print("Character Creator")
+    name = input("Name: ")
+    race = input("Race: ")
+    sex = input("Sex: ")
+    classRole = input("Class: ")
+else:
+    name = "Tom"
+    race = "Human"
+    sex = "Male"
+    classRole = "Priest"
 
 create_player_character(name, race, sex, classRole)
+
 
 
 from player_character import get_player_character
